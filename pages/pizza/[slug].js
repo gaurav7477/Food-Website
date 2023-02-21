@@ -5,6 +5,8 @@ import Image from 'next/image';
 import leftArrow  from '../../assets/arrowLeft.png'
 import rightArrow from '../../assets/arrowRight.png'
 import { useState } from 'react';
+import { useStore } from '../../store/store';
+import toast,{Toaster} from 'react-hot-toast';
 
 export default function pizza({ pizza }) {
     // console.log(pizza)
@@ -16,6 +18,17 @@ export default function pizza({ pizza }) {
         type === "inc" ? setQuantity((prev) => prev+1) : quantity === 1
         ? null : setQuantity((prev) => prev-1);
     };
+
+    // add to cart function
+
+    const addPizza = useStore((state)=>state.addPizza)
+    const addToCart= ()=>{
+        addPizza({...pizza, price : pizza.price[size], quantity : quantity, size:size})
+        // console.log("pizza added");
+        toast.success("Added to Cart");
+    }
+
+
     return (
 
         <Layout>
@@ -25,7 +38,7 @@ export default function pizza({ pizza }) {
                 <div className={css.ImageWrapper}>
                     <Image
                         loader={() => src}
-                        src={src} alt=" " objectFit="cover" unoptimized layout="fill" />
+                        src={src} alt="heheh" objectFit="cover" unoptimized layout="fill" />
                 </div>
 
                 {/* right side */}
@@ -60,10 +73,9 @@ export default function pizza({ pizza }) {
                     </div>
 
                     {/* button */}
-                    <div className={`btn ${css.btn}`}>
-                        Add to cart
-                    </div>
+                    <div className={`btn ${css.btn}`} onClick = {addToCart}>Add to cart</div>
                 </div>
+                <Toaster />
 
             </div>
 

@@ -1,9 +1,15 @@
 import css from '../styles/Header.module.css'
 import Image from 'next/image'
 import Logo from '../assets/Logo.png'
-import {UilShoppingBag} from '@iconscout/react-unicons'
+import { UilShoppingBag } from '@iconscout/react-unicons'
+import { useStore } from '../store/store'
+import Link from 'next/link';
 
 export default function Header() {
+
+    const state = useStore((state) => state)
+    // console.log(state);
+    const items = useStore((state) => state.cart.pizzas.length)
     return (
         <div className={css.header}>
             {/* logo side */}
@@ -14,7 +20,7 @@ export default function Header() {
 
             {/* menu side */}
 
-            <ul className={css.menu}> 
+            <ul className={css.menu}>
                 <li>Home</li>
                 <li>Menu</li>
                 <li>Contact</li>
@@ -22,10 +28,12 @@ export default function Header() {
 
             {/* rigth side */}
             <div className={css.rigthSide}>
-                <div className={css.cart}>
-                    <UilShoppingBag size={35} color = "#2E2E2E"/>
-                    <div className={css.badge}>1</div>
-                </div>
+                <Link href='/cart'>
+                    <div className={css.cart}>
+                        <UilShoppingBag size={35} color="#2E2E2E" />
+                        <div className={css.badge}>{items}</div>
+                    </div>
+                </Link>
             </div>
 
         </div>
