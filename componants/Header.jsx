@@ -1,21 +1,23 @@
 import css from '../styles/Header.module.css'
 import Image from 'next/image'
 import Logo from '../assets/Logo.png'
-import { UilShoppingBag,UilReceipt } from '@iconscout/react-unicons'
+import { UilShoppingBag, UilReceipt } from '@iconscout/react-unicons'
 import { useStore } from '../store/store'
 import Link from 'next/link';
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { Router } from 'react-router-dom'
 
 export default function Header() {
-
+    const router = useRouter();
     const state = useStore((state) => state)
     // console.log(state);
 
     const [order, setOrder] = useState("");
     useEffect(() => {
-      setOrder(localStorage.getItem("order"));
-      }, []);
-    
+        setOrder(localStorage.getItem("order"));
+    }, []);
+
     const items = useStore((state) => state.cart.pizzas.length)
     return (
         <div className={css.header}>
@@ -28,9 +30,16 @@ export default function Header() {
             {/* menu side */}
 
             <ul className={css.menu}>
-                <li> <Link href={"../"}>Home</Link> </li>
-                <li> Menu</li>
-                <li>Contact</li>
+                <li>
+                    <Link href={"../"}>Home</Link>
+                </li>
+                <li>
+                    <Link href={"../"}>Menu</Link>
+                </li>
+                <li>
+                    <Link href={"/contact"}>Contact</Link>
+                </li>
+                {/* <li>Contact</li> */}
             </ul>
 
             {/* rigth side */}
@@ -46,7 +55,7 @@ export default function Header() {
                     order && (
                         <Link href={`/order/${order}`}>
                             <div className={css.cart}>
-                                <UilReceipt size={35} color = "#2E2E2E" />
+                                <UilReceipt size={35} color="#2E2E2E" />
                                 {order != "" && <div className={css.badge}>1</div>}
                             </div>
                         </Link>

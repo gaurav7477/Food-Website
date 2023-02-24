@@ -107,3 +107,95 @@
     transform: scale(1.1);
     cursor: pointer;
 }
+
+@media screen and (max-width : 1680px)
+{
+    .container
+    {
+        flex-direction: column;
+    }
+
+    .right{
+        display: flex;
+        justify-content: center;
+    }
+
+    .contactUs{
+        top: 6rem;
+        left: 58rem;
+    }
+
+    .pizza 
+    {        
+        position: absolute;
+        bottom: 8rem;
+        left: 25rem;
+    }
+
+    .imageContainer{
+        
+        position: relative;
+    }
+}
+
+@media screen and (max-width : 1270px)
+{
+    .contactUs{
+        left: 38rem;
+    }
+
+    .pizza {
+        left: 15rem;
+    }
+}
+
+@media screen and (max-width : 930px)
+{
+    .contactUs{
+        left: 25rem;
+    }
+
+    .pizza {
+        left: -5rem;
+    }
+}
+
+@media screen and (max-width : 880px)
+{
+    .container
+    {
+        gap: 5rem;
+    }
+    .imageContainer{
+        
+        width: 28rem;
+    }
+
+    .contactUs{
+        display: none;
+    }
+
+    .pizza {
+        display: none;
+    }
+}
+
+@media screen and (max-width : 720px)
+{
+    .heroText{
+        font-size: 2.5rem;
+    }  
+}
+
+@media screen and (min-width : 720px)
+{
+    .container
+    {
+        justify-content: space-between;
+    } 
+
+    .imageContainer{
+        
+        position: relative;
+    }
+}
