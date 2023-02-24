@@ -5,6 +5,8 @@ import heroImage from '../assets/HeroImage.png'
 import {UilPhone} from '@iconscout/react-unicons'
 import Pizza1 from '../assets/p1.jpg'
 
+
+
 export default function Hero() {
     return (
         <div className={css.container}>
@@ -12,7 +14,7 @@ export default function Hero() {
             <div className={css.left}>
                 <div className={css.cherryDiv}>
                     <span>More than faster</span>
-                    <Image src={Cherry} alt=" " width={40} height={25} />
+                    <Image src={Cherry} alt="hehe" width={40} height={25} />
                 </div>
 
 
@@ -38,7 +40,7 @@ export default function Hero() {
             {/* rigth side */}
             <div className={css.right}>
                 <div className={css.imageContainer}>
-                    <Image src={heroImage} alt=" " layout='intrinsic' />
+                    <Image src={heroImage} alt="heh" layout='intrinsic' />
                 </div>
 
                 <div className={css.contactUs}>
@@ -50,7 +52,7 @@ export default function Hero() {
 
                 <div className={css.pizza}>
                     <div>
-                        <Image src={Pizza1} alt = "" objectFit='cover' layout='intrinsic' />
+                        <Image src={Pizza1} alt = "hehe" objectFit='cover' layout='intrinsic' />
                     </div>
 
                     <div className={css.details}>

@@ -19,7 +19,7 @@ export default function Service() {
             <div className={css.services}>
                 <div className={css.features}>
                     <div className={css.ImageWrapper}>
-                        <Image src={s1} alt = "" objectFit='cover' layout='intrinsic' />
+                        <Image src={s1} alt = "hehe" objectFit='cover' layout='intrinsic' />
                     </div>
 
                     <span>Easy to order</span>
@@ -28,7 +28,7 @@ export default function Service() {
 
                 <div className={css.features}>
                     <div className={css.ImageWrapper}>
-                        <Image src={s2} alt = "" objectFit='cover' layout='intrinsic' />
+                        <Image src={s2} alt = "hehe" objectFit='cover' layout='intrinsic' />
                     </div>
 
                     <span>Easy to order</span>
@@ -37,7 +37,7 @@ export default function Service() {
 
                 <div className={css.features}>
                     <div className={css.ImageWrapper}>
-                        <Image src={s3} alt = "" objectFit='cover' layout='intrinsic' />
+                        <Image src={s3} alt = "hehe" objectFit='cover' layout='intrinsic' />
                     </div>
 
                     <span>Easy to order</span>

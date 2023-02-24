@@ -24,7 +24,7 @@ export default function Menu({ pizzas }) {
                                 <div className={css.ImageWrapper}>
                                     <Image
                                         loader={() => src}
-                                        src={src} alt=" " objectFit="cover" layout="fill" />
+                                        src={src} alt="hehe" objectFit="cover" layout="fill" />
                                 </div>
 
                             </Link>

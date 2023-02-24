@@ -64,10 +64,10 @@ export default function pizza({ pizza }) {
                     <div className={css.quantity}>
                     <span>Quantity</span>
                         <div className={css.counter}>
-                            <Image src={leftArrow} height={20} width={20} objectFit = 'contain' onClick={()=>handleQuantity("dec")} />
+                            <Image src={leftArrow} height={20} alt="hehe" width={20} objectFit = 'contain' onClick={()=>handleQuantity("dec")} />
                             <span>{quantity}</span>
 
-                            <Image src={rightArrow} height={20} width={20} objectFit = 'contain' onClick={()=>handleQuantity("inc")} />
+                            <Image src={rightArrow} height={20} width={20} alt="hehe" objectFit = 'contain' onClick={()=>handleQuantity("inc")} />
                             
                         </div>
                     </div>

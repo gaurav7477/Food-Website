@@ -14,7 +14,7 @@ export default function Footer() {
             </div>
 
             <div className={css.logo}>
-                <Image src={Logo} alt="" width={50} height50 />
+                <Image src={Logo} alt="heh" width={50} height={50} />
                 <span>Fudo</span>
             </div>
         </div>
