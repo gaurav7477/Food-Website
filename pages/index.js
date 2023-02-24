@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Hero from "../componants/Hero";
 import Layout from "../componants/Layout";
-import Menu from "../pages/Menu";
+import Menu from "../componants/Menu";
 import Service from "../componants/Service";
 import { client } from "../lib/client";
 import css from '../styles/Home.module.css'
 
 export default function Home({pizzas}) {
-  console.log(pizzas)
+  // console.log(pizzas)
   return (
     <Layout>
       <div className={css.container}>
