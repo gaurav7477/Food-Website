@@ -6,7 +6,6 @@ import { useStore } from '../store/store'
 import Link from 'next/link';
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { Router } from 'react-router-dom'
 
 export default function Header() {
     const router = useRouter();
